@@ -1,0 +1,240 @@
+/* App.css */
+/* Make container full width */
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.krishi-portal {
+  width: 100%;
+  height: 100vh; /* Full height of the viewport */
+  max-width: 100%;
+  padding: 0;
+  margin: 0 auto;
+  font-family: 'Roboto', 'Noto Sans Kannada', sans-serif;
+  background: #f5f5f5;
+  box-sizing: border-box;
+  overflow-y: auto; /* Scroll if content overflows */
+}
+.state-emblem{
+  width: 140px;
+  height: auto;
+  display: block;
+}
+.small-doc-img {
+  width: 40px;
+  height: auto;
+  display: block;
+}
+
+
+/* Karnataka Color Scheme */
+.karnataka-header {
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.karnataka-tricolor {
+  height: 6px;
+  display: flex;
+}
+.red-band { background: #CC2828; flex: 1; }
+.white-band { background: #fff; flex: 0.3; }
+.yellow-band { background: #F4C430; flex: 1; }
+
+.state-emblem {
+  height: 70px;
+  margin-right: 20px;
+}
+
+.header-titles h1 {
+  color: #004B87;
+  font-size: 1.8rem;
+  margin: 0;
+}
+.header-titles h2 {
+  color: #CC2828;
+  font-size: 1.3rem;
+  margin: 5px 0;
+}
+.header-titles p {
+  color: #333;
+  font-size: 1rem;
+}
+
+.govt-nav {
+  background: #004B87;
+  padding: 10px 0;
+}
+.govt-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 25px;
+}
+.govt-nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+.govt-nav a:hover {
+  color: #F4C430;
+}
+
+.govt-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 25px;
+  margin-bottom: 25px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.section-title {
+  color: #004B87;
+  border-bottom: 2px solid #F4C430;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn-govt {
+  background: #004B87;
+  color: #fff;
+  padding: 10px 30px;
+  border: none;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.btn-govt:hover {
+  background: #00315e;
+}
+
+.document-list {
+  border: 1px solid #eee;
+  border-radius: 4px;
+}
+.document-item {
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+}
+.document-item:hover {
+  background: #f8f8f8;
+}
+
+.download-btn {
+  background: #F4C430;
+  color: #000;
+  padding: 8px 20px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 500;
+  cursor: pointer;
+}
+.download-btn:hover {
+  background: #d8ac2a;
+}
+
+.karnataka-footer {
+  background: #004B87;
+  color: #fff;
+  padding: 30px 0;
+  margin-top: 40px;
+}
+.footer-section {
+  margin-bottom: 20px;
+}
+.footer-section h4 {
+  color: #F4C430;
+  margin-bottom: 15px;
+}
+.copyright {
+  border-top: 1px solid #F4C430;
+  padding-top: 15px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* Fixed Carousel Container */
+.farmer-carousel {
+  margin: 20px 0;
+  border-bottom: 3px solid #F4C430;
+  height: 400px; /* fixed height */
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel {
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-inner {
+  height: 100%;
+  position: relative;
+}
+
+.carousel-item {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 0.5s ease-in-out;
+  opacity: 0;
+  z-index: 0;
+}
+
+.carousel-item.active {
+  opacity: 1;
+  z-index: 1;
+  position: relative;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* keeps aspect ratio but covers entire area */
+  object-position: center;
+  display: block;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header-titles h1 {
+    font-size: 1.4rem;
+  }
+
+  .govt-nav ul {
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .carousel-item img {
+    height: 250px;
+  }
+
+  .carousel-caption {
+    bottom: 10px;
+    padding: 10px;
+  }
+
+  .carousel-caption h3 {
+    font-size: 1.2rem;
+  }
+
+  .carousel-caption p {
+    font-size: 0.8rem;
+  }
+}
